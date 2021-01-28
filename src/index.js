@@ -1,6 +1,9 @@
-const test = require('./service/watch/index');
+const watcher = require('./service/watch/index');
+const schedule = require('node-schedule');
+global.settings = require('./settings.json');
 
 (async () => {
-  console.log('hello world!');
-  console.log('cpu:: ', await test.getFreeCPU());
+  schedule.scheduleJob(`*/${global.settings.cpuTimerSeconds} * * * * *`, async () => {
+    console.log('free CPU:: ', await watcher.getFreeCPU());
+  });
 })()
