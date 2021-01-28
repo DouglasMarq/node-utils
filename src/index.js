@@ -5,5 +5,6 @@ global.settings = require('./settings.json');
 (async () => {
   schedule.scheduleJob(`*/${global.settings.cpuTimerSeconds} * * * * *`, async () => {
     console.log('free CPU:: ', await watcher.getFreeCPU());
+    console.log('free Mem:: ', await watcher.getFreeMem());
   });
 })()
