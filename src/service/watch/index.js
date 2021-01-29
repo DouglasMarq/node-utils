@@ -1,7 +1,4 @@
 const osu = require('node-os-utils');
-
-process.env.UV_THREADPOOL_SIZE = osu.cpu.count()
-
 let watcherStruct = {
   cpu: {
     cpuFree: 0,
