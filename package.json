@@ -7,7 +7,8 @@
   "author": "DouglasMarq <douglas.marq.alves@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+		"test": "jest"
   },
   "dependencies": {
     "check-disk-space": "^2.1.0",
